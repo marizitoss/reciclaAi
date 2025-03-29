@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recicla Aí</title>
-    <link rel="stylesheet" href="home.css">
+    <!-- <link rel="stylesheet" href="../css/home.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="shortcut icon" href="logo_icon.ico" type="image/x-icon">
+
 </head>
 
 <body>
+
+    <nav>
+        <!-- <img src="logo_header2.svg" alt="recicla aí logo"> -->
+        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='logo_header2.svg') }}" alt="Minha Imagem" width="300"></a>
+        <ul>
+            <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+            <li><a href="{{ url_for('coleta') }}">Pontos de Coleta</a></li>
+            <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            <li><a href="{{ url_for('cadastro') }}" target="_blank">Cadastre-se</a></li>
+        </ul>
+        
+         
+    </nav>
+    
     <header>
         <link rel="reciclaai icon" type="imagex/png" href="logo_icon.ico">
-        <img src="logo_header2.svg" alt="recicla aí logo">
+        <!-- <img src="logo_header2.svg" alt="recicla aí logo"> -->
+        <img src="{{ url_for('static', filename='logo_header2.svg') }}" alt="Minha Imagem" width="300">
         <h1>Transformando resíduos em oportunidades!</h1>
     </header>
 
-    <nav>
-        <a href="sobre.html">Sobre</a>
-        <a href="coleta.html">Pontos de Coleta</a>
-        <a href="contato.html">Contato</a>
-        <a href="cadastro.html">Cadastre-se</a>
-    </nav>
+    
 
     <main>
         <section class="section">

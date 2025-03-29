@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html, body {
+    overflow-x: hidden; /* Impede rolagem lateral */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background: linear-gradient(135deg, #bde4a2, #89dcc5);
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-bottom: 8px solid #4d8c8c;
+    padding: 20px;
+  }
+  
+  header img {
+    width: 150px;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7fb5b5;
+    position: sticky;
+    top: 0;
+  }
+  
+  nav ul {
+    background-color: #7fb5b5;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 15px ;
+
+    z-index: 1000;
+    align-content: center;
+    width: 90%;
+  }
+  
+  nav ul li{
+    list-style: none;
+  }
+  
+  nav img{
+    width: 100px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    /* padding: 12px; */
+    /* border-radius: 50px; */
+    /* background-color: #66a3a3; */
+    
+    transition: background-color 0.3s, transform 0.3s;
+    
+  }
+  
+  nav ul li a:hover {
+    /* background-color: #4d8c8c; */
+    transform: scale(1.05);
+  }
+
+
+  
+  /* Ícone do menu hambúrguer */
+/* .menu-toggle {
+    /* display: unset; */
+    /* font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+} */ 
+
+@media screen and (max-width: 768px) {
+    nav ul{
+        background-color: #7fb5b5;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 15px ;
+        flex-direction: column;
+    
+        z-index: 1000;
+        align-content: center;
+        width: 90%;
+    }
+}

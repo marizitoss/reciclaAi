@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicla Aí</title>
+    <!-- <link rel="stylesheet" href="../css/home.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='c.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <!-- <img src="logo_header2.svg" alt="recicla aí logo"> -->
+        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='logo_header2.svg') }}" alt="Minha Imagem" width="300"></a>
+        <ul>
+            <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+            <li><a href="{{ url_for('coleta') }}">Pontos de Coleta</a></li>
+            <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            <li><a href="{{ url_for('cadastro') }}" target="_blank">Cadastre-se</a></li>
+        </ul>
+        
+         
+    </nav>
+   
+    
+    <section >
+        <div class="container">
+            <h2>Cadastro</h2>
+        <form>
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Senha" required>
+            <input type="text" placeholder="Cidade/Bairro" required>
+            <button type="submit">Cadastrar como Usuário</button>
+        </form>
+        <a href="#">Cadastrar como empresa</a>
+
+        </div>
+        
+    </section>
+</body>
+</html>
